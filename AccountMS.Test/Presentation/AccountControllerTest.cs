@@ -1,4 +1,4 @@
-﻿using AccountMS.Application.Commands;
+using AccountMS.Application.Commands;
 using AccountMS.Controllers;
 using AccountMS.Test.Data.MockData;
 using MediatR;
