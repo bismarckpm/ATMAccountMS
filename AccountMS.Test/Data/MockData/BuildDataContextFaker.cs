@@ -31,5 +31,17 @@ namespace AccountMS.Test.Data.MockData
             };
             return new CreateAccountCommand(account);
         }
+
+        public static CreateAccountDto GenerateCreateAccountDto()
+        {
+            return new CreateAccountDto()
+            {
+                ClientId = new Guid("c0869fe3-0236-4542-9b46-18fb2e209822"),
+                AccountNumber = "8985644652345",
+                AccountType = AccountType.Checking.ToString(),
+                Currency = "USD",
+                InitialBalance = 100
+            };
+        }
     }
 }
