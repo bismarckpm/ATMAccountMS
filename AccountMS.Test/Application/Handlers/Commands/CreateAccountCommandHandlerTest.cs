@@ -45,7 +45,7 @@ namespace AccountMS.Test.Application.Handlers.Commands
 
             _accountRepositoryMock.Setup(x =>
                     x.AddAsync(It.IsAny<Domain.Entities.Account>()))
-                .Throws(new Exception("Error"));
+                .ThrowsAsync(new Exception("Error"));
 
             var ex = Assert.ThrowsAsync<Exception>(async () =>
             await _handler.Handle(command, new System.Threading.CancellationToken()));
